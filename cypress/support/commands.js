@@ -3,9 +3,9 @@ Cypress.Commands.add('AbrirLojaVirtual', function(){
     cy.get('#sc_terms-consent',{timeout:8000}).click() 
     
 })
-Cypress.Commands.add('SelecionarOpcaoCartoesVR', () => {
-    cy.get('#btn-selecionar-modalidade-avulso',{timeout:20000}).should('be.visible').click();
-  })
+//Cypress.Commands.add('SelecionarOpcaoCartoesVR', () => {
+    //cy.get('#btn-selecionar-modalidade-avulso',{timeout:20000}).should('be.visible').click();
+  //})
   Cypress.Commands.add('AdicionarQuantidade', (produto, quantidade) => {
     cy.get(produto).should('be.visible').clear().type(quantidade);
   })
