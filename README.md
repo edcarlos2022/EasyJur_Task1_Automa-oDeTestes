@@ -5,7 +5,7 @@
 
 ## Pre-requisitos
 
-Este projeto requer cypress versão 13.7.2, Node.js 23.1.0 e npm na versão v10.9.0 ou superior.
+Este projeto requer cypress versão 13.7.2, Node.js 20.18.0 e npm na versão v10.8.2 ou superior.
 
 ##Instalação
 npm install cypress --save-dev + Run npm install (or npm i for the short version) para instalar as dependências.
