@@ -1,17 +1,23 @@
-## readme Frontend-VR 
+## readme EasyJur_Task1_AutomacaoDeTestes 
  Este projeto utiliza Cypress para realizar testes de UI no modo interativo e também no modo headless
 ## Breve Descrição do Projeto 
  projeto automação de testes, feature: loja Virtual validar compra em carrinho
 
 ## Pre-requisitos
 
-Este projeto requer cypress versão 13.7.2, Node.js 16.13.2 e npm na versão v8.1.2 ou superior.
+Este projeto requer cypress versão 13.7.2, Node.js 23.1.0 e npm na versão v10.9.0 ou superior.
 
 ##Instalação
 npm install cypress --save-dev + Run npm install (or npm i for the short version) para instalar as dependências.
 
 ##Recomendação
-Recomendo fazer um fork deste projeto, pois há exeções que foram necessárias no arquivo e2e.js (antigo index.js) devido a erros desconhecidos do app.
+Recomendo fazer um fork deste projeto, pois há exeções que foram necessárias no arquivo e2e.js (antigo index.js) devido a erros desconhecidos do app, para tanto foi necessário importar um código é um manipulador de eventos que lida com exceções não capturadas durante a execução dos testes:
+    import './commands'
+    Cypress.on('uncaught:exception', (err, runnable) => {
+
+   return false
+   })
+
 
 ## Tests
  
