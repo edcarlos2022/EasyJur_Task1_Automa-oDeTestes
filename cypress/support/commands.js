@@ -1,13 +1,13 @@
 Cypress.Commands.add('AbrirLojaVirtual', function(){
-    cy.visit('https://loja.vr.com.br',{timeout:20000})
+    cy.visit('https://loja.vr.com.br/modalidade/avulso',{timeout:20000})
     cy.get('#sc_terms-consent',{timeout:8000}).click() 
     
 })
-Cypress.Commands.add('SelecionarOpcaoCartoesVR', () => {
+/*Cypress.Commands.add('SelecionarOpcaoCartoesVR', () => {
   cy.viewport(1920, 1080);
   cy.get('#btn-selecionar-modalidade-avulso',{timeout:3000}).should('be.visible').click();
 
-  })
+  })*/
   Cypress.Commands.add('AdicionarQuantidade', (produto, quantidade) => {
     cy.get(produto).should('be.visible').clear().type(quantidade);
   })
@@ -19,7 +19,7 @@ Cypress.Commands.add('SelecionarOpcaoCartoesVR', () => {
   })
 
   Cypress.Commands.add('ValidarProdutoAdicionadoCarrinho', () => {
-    cy.get('#btn-selecionar-modalidade-avulso').click()
+    //cy.get('#btn-selecionar-modalidade-avulso').click()
     cy.get('#produto-auto-quantidade').clear().type('5')
     cy.get('#produto-auto-valor').clear().type('5,00')
   
