@@ -9,7 +9,7 @@ describe('Validar que um produto pode ser adicionado, com sucesso, ao carrinho',
   })
 
       it('selecionar a opçao "Soluções VR"', function(){
-       cy.get('#btn-selecionar-modalidade-avulso').click()
+       cy.get('#btn-selecionar-modalidade-avulso',{timeout:20000}).should('be.visible').click()
        cy.get('.lojavr-style-c-PKtiO').contains('Soluções VR')
        
       })

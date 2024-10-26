@@ -4,7 +4,7 @@ Cypress.Commands.add('AbrirLojaVirtual', function(){
     
 })
 Cypress.Commands.add('SelecionarOpcaoCartoesVR', () => {
-    cy.get('#btn-selecionar-modalidade-avulso').should('be.visible').click();
+    cy.get('#btn-selecionar-modalidade-avulso',{timeout:20000}).should('be.visible').click();
   })
   Cypress.Commands.add('AdicionarQuantidade', (produto, quantidade) => {
     cy.get(produto).should('be.visible').clear().type(quantidade);
@@ -17,7 +17,7 @@ Cypress.Commands.add('SelecionarOpcaoCartoesVR', () => {
   })
 
   Cypress.Commands.add('ValidarProdutoAdicionadoCarrinho', () => {
-    cy.get('#btn-selecionar-modalidade-avulso').click()
+    cy.get('#btn-selecionar-modalidade-avulso',{timeout:20000}).should('be.visible').click()
     cy.get('#produto-auto-quantidade').clear().type('5')
     cy.get('#produto-auto-valor').clear().type('5,00')
   
