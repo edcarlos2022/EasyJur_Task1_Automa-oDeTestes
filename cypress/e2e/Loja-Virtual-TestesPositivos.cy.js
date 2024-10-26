@@ -8,14 +8,15 @@ describe('Validar que um produto pode ser adicionado, com sucesso, ao carrinho',
     cy.AbrirLojaVirtual()
   })
 
-      it('selecionar a opçao "cartoes VR"', function(){
+      it('selecionar a opçao "Soluções VR"', function(){
        cy.get('#btn-selecionar-modalidade-avulso').click()
+       cy.get('.lojavr-style-c-PKtiO').contains('Soluções VR')
        
       })
 
       it('adicionar quantidade aletoria (POSITIVA) de cartoes do produto "Auto"', function(){
         cy.SelecionarOpcaoCartoesVR();
-        cy.AdicionarQuantidade('#produto-auto-quantidade', '2')
+        cy.AdicionarQuantidade('#produto-auto-quantidade', '1')
       })
 
       it('digitar um valor de credito (POSITIVO MIN) aleatorio para o produto "Auto"', function(){       

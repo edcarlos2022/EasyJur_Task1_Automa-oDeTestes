@@ -1,4 +1,4 @@
-name: Frontend VR 🧪
+name: Task 1 Automação de testes 🧪
 on: [push]
 jobs:
   cypress-run:

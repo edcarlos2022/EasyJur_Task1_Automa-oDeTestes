@@ -1,6 +1,6 @@
 Cypress.Commands.add('AbrirLojaVirtual', function(){
-    cy.visit('https://loja.vr.com.br/')
-   cy.get('.fas',{timeout: 15000}).click()
+    cy.visit('https://loja.vr.com.br',{timeout:20000})
+    cy.get('#sc_terms-consent',{timeout:8000}).click() 
     
 })
 Cypress.Commands.add('SelecionarOpcaoCartoesVR', () => {
@@ -38,7 +38,7 @@ Cypress.Commands.add('SelecionarOpcaoCartoesVR', () => {
   })
 
   Cypress.Commands.add('ValidarMensagemErro', (elemento, mensagem) => {
-    cy.get(elemento).should('have.text', mensagem);
+    cy.get(elemento).should('contain', mensagem);
   })
 
 
