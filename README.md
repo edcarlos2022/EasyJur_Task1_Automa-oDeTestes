@@ -1,5 +1,5 @@
 ## readme EasyJur_Task1_AutomacaoDeTestes 
- Este projeto utiliza Cypress para realizar testes de UI no modo interativo e também no modo headless
+ Este projeto utiliza Cypress para realizar testes de UI e API no modo interativo e também no modo headless
 ## Breve Descrição do Projeto 
  projeto automação de testes, feature: loja Virtual validar compra em carrinho
 
