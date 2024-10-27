@@ -9,30 +9,30 @@ describe('Validar que um produto pode ser adicionado, com sucesso, ao carrinho',
   })
 
       it('selecionar a opçao "Soluções VR"', function(){
-       //cy.get('#btn-selecionar-modalidade-avulso').click()
+        cy.SelecionarOpcaoCartoesVR()
        cy.get('.lojavr-style-c-PKtiO').contains('Soluções VR')
        
       })
 
       it('adicionar quantidade aletoria (POSITIVA) de cartoes do produto "Auto"', function(){
-        //cy.SelecionarOpcaoCartoesVR();
+        cy.SelecionarOpcaoCartoesVR()
         cy.AdicionarQuantidade('#produto-auto-quantidade', '1')
       })
 
       it('digitar um valor de credito (POSITIVO MIN) aleatorio para o produto "Auto"', function(){       
-        //cy.SelecionarOpcaoCartoesVR();
+        cy.SelecionarOpcaoCartoesVR()
         cy.DigitarValorCredito('#produto-auto-valor', '1,00')
         
       })
 
       it('digitar um valor de credito (POSITIVO MAX) aleatorio para o produto "Auto"', function(){
-       // cy.SelecionarOpcaoCartoesVR();
+        cy.SelecionarOpcaoCartoesVR()
         cy.DigitarValorCredito('#produto-auto-valor', '9999,99')
         
       })
       
       it('clicar no botão "Adicionar ao carrinho"',function(){
-        //cy.SelecionarOpcaoCartoesVR();
+        cy.SelecionarOpcaoCartoesVR()
         cy.AdicionarQuantidade('#produto-auto-quantidade', '5')
         cy.DigitarValorCredito('#produto-auto-valor', '5,00')
         cy.ClicarAdicionarCarrinho()        
